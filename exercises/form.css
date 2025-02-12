@@ -1,0 +1,108 @@
+/* พื้นหลังและโครงสร้าง */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #d3d9fa, #d1f6ec);
+}
+
+/* สไตล์ฟอร์ม */
+form {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    padding: 30px; /* เพิ่ม Padding */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* หัวข้อ */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ป้ายชื่อ */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #444;
+    letter-spacing: 0.5px;
+}
+
+/* ช่องอินพุต */
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    transition: border 0.3s ease-in-out; /* เพิ่มการเคลื่อนไหวเมื่อโฟกัส */
+}
+
+/* สไตล์ช่องกรอกข้อมูลเมื่อโฟกัส */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* เงาสีเขียว */
+}
+
+/* ปุ่ม */
+button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ปุ่ม reset */
+button[type="reset"] {
+    background-color: #f44336;
+    margin-top: 10px;
+}
+
+button[type="reset"]:hover {
+    background-color: #e53935;
+}
+
+/* เงาเมื่ออยู่ในโฟกัส */
+input:focus, textarea:focus, select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(0, 128, 0, 0.5); /* เงาสีเขียว */
+}
+
+/* ปรับระยะห่างระหว่างแต่ละฟิลด์ */
+input, select, textarea {
+    margin-bottom: 20px;
+}
+
+/* ข้อความ error หากมี */
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}

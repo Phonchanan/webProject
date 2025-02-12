@@ -1,0 +1,185 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa; /* โทนสีพื้นหลังที่อ่อนและอบอุ่น */
+    color: #333;
+}
+
+h1, h2, h3, h4, h5 {
+    text-align: center;
+    color: #2c2b2b;
+    font-weight: 700;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Bar */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff6f61; /* สีชมพูอ่อน */
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d84b3a; /* สีชมพูเข้ม */
+    text-decoration: underline; /* ขีดเส้นใต้เมื่อชี้เมาส์ */
+    transform: scale(1.05); /* เพิ่มลูกเล่นขยายเมื่อโฮเวอร์ */
+}
+
+/* Flexbox Layout */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px auto;
+    max-width: 1100px;
+    flex-wrap: wrap;
+}
+
+.menu-image {
+    flex: 1;
+    text-align: center;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-image img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.menu-image img:hover {
+    transform: scale(1.05); /* ขยายเมื่อโฮเวอร์ */
+}
+
+.menu-content {
+    flex: 2;
+    text-align: left;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Steps Box */
+.steps-box {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.steps-box h3 {
+    color: #ff6f61;
+    font-weight: bold;
+}
+
+/* Nutrition Table */
+.nutrition {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    font-size: 1.1em;
+}
+
+table th {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px;
+}
+
+/* Comment Section */
+.comment-section {
+    margin: 30px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* แก้ไขช่องกรอกข้อมูลเพื่อไม่ให้ติดขอบ */
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* ทำให้ padding รวมกับความกว้าง */
+}
+
+
+form button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #d84b3a;
+}
+
+form button:active {
+    transform: scale(0.98); /* ขยายหรือลดขนาดเมื่อตรวจสอบการกด */
+}
+
+/* Back to Top Link */
+a[href="#Top"] {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: #ff6f61;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a[href="#Top"]:hover {
+    color: #d84b3a;
+    text-decoration: underline;
+}

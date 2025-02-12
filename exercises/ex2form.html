@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ฟอร์มลงทะเบียนศิษย์เก่า IT + IS</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form action="/submit-alumni" method="post" enctype="multipart/form-data">
+        <h1>ฟอร์มลงทะเบียนศิษย์เก่า IT + IS</h1>
+
+        <!-- ชื่อ-สกุล -->
+        <label for="fullName">ชื่อ-สกุล:</label>
+        <input type="text" id="fullName" name="fullName" placeholder="กรอกชื่อ-สกุล..." required>
+
+        <!-- รหัสนักศึกษา -->
+        <label for="studentId">รหัสนักศึกษา:</label>
+        <input type="text" id="studentId" name="studentId" placeholder="กรอกรหัสนักศึกษา..." required>
+
+        <!-- ปีการศึกษาเข้าศึกษา -->
+        <label for="enrollmentYear">ปีการศึกษาเข้าศึกษา:</label>
+        <input type="number" id="enrollmentYear" name="enrollmentYear" min="1900" max="2100" placeholder="กรอกปีการศึกษา..." required>
+
+        <!-- ที่อยู่ -->
+        <label for="address">ที่อยู่:</label>
+        <textarea id="address" name="address" rows="3" placeholder="กรอกที่อยู่..." required></textarea>
+
+        <!-- อีเมลล์ -->
+        <label for="email">อีเมลล์:</label>
+        <input type="email" id="email" name="email" placeholder="กรอกอีเมลล์..." required>
+
+        <!-- เบอร์โทรติดต่อ -->
+        <label for="phone">เบอร์โทรติดต่อ:</label>
+        <input type="tel" id="phone" name="phone" placeholder="กรอกเบอร์โทรศัพท์..." pattern="[0-9]{10}" required>
+
+        <!-- ชื่อหลักสูตร -->
+        <label for="course">ชื่อหลักสูตร:</label>
+        <select id="course" name="course" required>
+            <option value="IT">เทคโนโลยีสารสนเทศ (IT)</option>
+            <option value="IS">ระบบสารสนเทศ (IS)</option>
+        </select>
+
+        <!-- อาชีพปัจจุบัน -->
+        <label for="currentJob">อาชีพปัจจุบัน:</label>
+        <input type="text" id="currentJob" name="currentJob" placeholder="กรอกอาชีพปัจจุบัน..." required>
+
+        <!-- สถานที่ทำงาน -->
+        <label for="workplace">สถานที่ทำงาน:</label>
+        <textarea id="workplace" name="workplace" rows="2" placeholder="ระบุชื่อบริษัท และที่อยู่..." required></textarea>
+
+        <!-- ประเภทงาน -->
+        <label for="jobType">ประเภทงาน:</label>
+        <select id="jobType" name="jobType" required>
+            <option value="Web Developer">Web Developer</option>
+            <option value="System Analyst">System Analyst</option>
+            <option value="Graphic Designer">Graphic Designer</option>
+            <option value="Digital Marketing">Digital Marketing</option>
+        </select>
+
+        <!-- Upload รูปถ่าย -->
+        <label for="photo">อัปโหลดรูปถ่าย:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" required>
+
+        <!-- ปุ่ม -->
+        <button type="submit">ลงทะเบียน</button>
+        <button type="reset">ล้างข้อมูล</button>
+    </form>
+</body>
+</html>
