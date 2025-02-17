@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gradient Background</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Toggle for hamburger menu
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
 </head>
 <body class="bg-gradient-to-b from-blue-950 to-blue-200 min-h-screen">
     <!-- แถบบาร์ด้านบน-->
@@ -13,21 +20,30 @@
             <h1 class="text-white text-2xl font-bold">Web Portfolio</h1>
             
             <!-- เมนูนำทาง -->
-            <ul class="flex space-x-6 text-white font-bold">
-                <li><a href="#" class="hover:underline">Home</a></li>
-                <li><a href="#" class="hover:underline">About</a></li>
-                <li><a href="#contact" class="hover:underline">Contact</a></li>
+            <div class="lg:hidden">
+                <!-- Hamburger Icon -->
+                <button class="text-white" onclick="toggleMenu()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- เมนูสำหรับขนาดหน้าจอใหญ่ (Desktop) -->
+            <ul id="menu" class="hidden lg:flex space-x-8 text-white font-semibold text-lg">
+                <li><a href="#" class="hover:text-yellow-400 transition duration-300">Home</a></li>
+                <li><a href="#ex" class="hover:text-yellow-400 transition duration-300">Exercises</a></li>
+                <li><a href="#contact" class="hover:text-yellow-400 transition duration-300">Contact</a></li>
             </ul>
         </div>
     </div>
-
     <!-- ส่วนข้อมูลส่วนตัว -->
     <div class="container mx-auto flex justify-center items-center mt-20">
         <!-- รูปภาพและข้อมูล -->
         <div class="flex flex-col justify-center items-center space-y-4">
             <!-- รูปภาพ -->
             <div class="flex-none w-64 h-64 rounded-full overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                <img src="exercises/images/474877707_1677080879572681_8159784854909022027_n.jpg" alt="Profile Picture" class="w-full h-full object-cover">
+                <img src="src/images/u.jpg" alt="Profile Picture" class="w-full h-full object-cover">
             </div>
 
             <!-- ข้อมูลส่วนตัว -->
@@ -39,29 +55,40 @@
         </div>
     </div>
 
+    <!-- ส่วนหัวข้อแบบฝึกหัด -->
+    <div class="container mx-auto text-center mt-16 text-white">
+        <h3 id="ex" class="text-2xl font-bold mb-4">แบบฝึกหัด</h3>
+    </div>
+
     <main class="container mx-auto p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Exercise 1 -->
-        <a href="exercises/ex1menu.html" class="exercise group text-center bg-white p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-            <img src="exercises/images/bakeries-01.1.jpg" alt="Menu Icon" class="w-32 h-32 object-cover mb-4 mx-auto rounded-full group-hover:opacity-80">
+        <a href="src/ex1menu.html" class="exercise group text-center bg-white p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="src/images/widget.png" alt="Menu Icon" class="w-32 h-32 object-cover mb-4 mx-auto rounded-full group-hover:opacity-80">
             <h2 class="text-xl font-semibold text-gray-800 group-hover:text-blue-600">Ex1 Basic HTML</h2>
         </a>
     
         <!-- Exercise 2 -->
-        <a href="exercises/ex2form.html" class="exercise group text-center bg-white p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-            <img src="exercises/images/google-forms.png" alt="Form Icon" class="w-32 h-32 object-cover mb-4 mx-auto rounded-full group-hover:opacity-80">
+        <a href="src/ex2form.html" class="exercise group text-center bg-white p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="src/images/online-survey.png" alt="Form Icon" class="w-32 h-32 object-cover mb-4 mx-auto rounded-full group-hover:opacity-80">
             <h2 class="text-xl font-semibold text-gray-800 group-hover:text-blue-600">Ex2 Form</h2>
         </a>
     
         <!-- Exercise 3 -->
-        <a href="exercises/ex3boxmodel.html" class="exercise group text-center bg-white p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-            <img src="exercises/images/model.png" alt="Box Model Icon" class="w-32 h-32 object-cover mb-4 mx-auto rounded-full group-hover:opacity-80">
+        <a href="src/ex3boxmodel.html" class="exercise group text-center bg-white p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="src/images/model.png" alt="Box Model Icon" class="w-32 h-32 object-cover mb-4 mx-auto rounded-full group-hover:opacity-80">
             <h2 class="text-xl font-semibold text-gray-800 group-hover:text-blue-600">Ex3 Box Model</h2>
         </a>
     
         <!-- Exercise 4 -->
-        <a href="exercises/ex4เมนูสวยงาม.html" class="exercise group text-center bg-white p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-            <img src="exercises/images/menu.png" alt="Beautiful Menu Icon" class="w-32 h-32 object-cover mb-4 mx-auto rounded-full group-hover:opacity-80">
+        <a href="src/ex4เมนูสวยงาม.html" class="exercise group text-center bg-white p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="src/images/menu (1).png" alt="Beautiful Menu Icon" class="w-32 h-32 object-cover mb-4 mx-auto rounded-full group-hover:opacity-80">
             <h2 class="text-xl font-semibold text-gray-800 group-hover:text-blue-600">Ex4 Menu</h2>
+        </a>
+
+         <!-- Exercise 5 -->
+         <a href="src/ex5login.html" class="exercise group text-center bg-white p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            <img src="src/images/user.png" alt="Beautiful Menu Icon" class="w-32 h-32 object-cover mb-4 mx-auto rounded-full group-hover:opacity-80">
+            <h2 class="text-xl font-semibold text-gray-800 group-hover:text-blue-600">Ex5 login</h2>
         </a>
     </main>
 

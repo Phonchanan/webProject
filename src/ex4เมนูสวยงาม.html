@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ขนมปังเนยสด</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md py-5 text-center">
+        <h1 class="text-3xl font-bold text-blue-600">ขนมปังเนยสด</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-blue-600 text-white py-3">
+        <ul class="flex justify-center space-x-6">
+            <li><a href="#วัตถุดิบ" class="hover:underline">วัตถุดิบ</a></li>
+            <li><a href="#วิธีทำ" class="hover:underline">วิธีทำ</a></li>
+            <li><a href="#คุณค่าทางอาหาร" class="hover:underline">คุณค่าทางอาหาร</a></li>
+        </ul>
+    </nav>
+
+    <!-- Content -->
+    <div class="max-w-4xl mx-auto p-6">
+
+        <!-- Image & Ingredients -->
+        <div class="flex flex-wrap items-center bg-white p-6 rounded-lg shadow-lg">
+            <div class="w-full md:w-1/2 p-4">
+                <img src="images/bakeries-01.1.jpg" alt="ขนมปัง" class="rounded-lg shadow-md">
+            </div>
+            <div class="w-full md:w-1/2">
+                <h2 id="วัตถุดิบ" class="text-2xl font-semibold text-blue-700 mb-3">วัตถุดิบ</h2>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                    <li>แป้งสาลี 40 กรัม</li>
+                    <li>แป้งขนมปัง 160 กรัม</li>
+                    <li>เนยสด 40 กรัม</li>
+                    <li>ไข่ไก่ 1 ฟอง</li>
+                    <li>นมสด 90 กรัม</li>
+                    <li>เกลือ 1/4 ช้อนชา</li>
+                    <li>ยีสต์ 5 กรัม</li>
+                    <li>น้ำตาล 50 กรัม</li>
+                    <li>กลิ่นวานิลลา 1 ช้อนชา</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Steps -->
+        <div class="bg-white p-6 mt-6 rounded-lg shadow-lg">
+            <h2 id="วิธีทำ" class="text-2xl font-semibold text-blue-700 mb-3">วิธีทำ</h2>
+            <ol class="list-decimal pl-5 space-y-2 text-gray-700">
+                <li>เตรียมชามผสม ใส่ไข่ไก่ นมสด เกลือ วานิลลา และน้ำตาล คนให้เข้ากัน</li>
+                <li>ใส่แป้งขนมปัง แป้งสาลี และยีสต์ คนให้เข้ากัน</li>
+                <li>เติมเนยสด ตีจนแป้งเนียน แล้วพักไว้ให้ขึ้นตัว</li>
+                <li>แบ่งแป้งเป็นก้อน 50 กรัม ปั้นเป็นก้อนกลม</li>
+                <li>อบที่ 180 องศาเซลเซียส 15 นาที</li>
+                <li>ทาเนยสด และโรยน้ำตาลไอซิ่ง พร้อมเสิร์ฟ</li>
+            </ol>
+        </div>
+
+        <!-- Nutrition -->
+        <div class="bg-white p-6 mt-6 rounded-lg shadow-lg">
+            <h2 id="คุณค่าทางอาหาร" class="text-2xl font-semibold text-blue-700 mb-3">คุณค่าทางอาหาร</h2>
+            <table class="w-full border-collapse border border-gray-300">
+                <thead>
+                    <tr class="bg-blue-600 text-white">
+                        <th class="border border-gray-300 px-4 py-2">สารอาหาร</th>
+                        <th class="border border-gray-300 px-4 py-2">ปริมาณ</th>
+                        <th class="border border-gray-300 px-4 py-2">หน่วย</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center">
+                        <td class="border border-gray-300 px-4 py-2">โปรตีน</td>
+                        <td class="border border-gray-300 px-4 py-2">9.5</td>
+                        <td class="border border-gray-300 px-4 py-2">g</td>
+                    </tr>
+                    <tr class="bg-blue-100 text-center">
+                        <td class="border border-gray-300 px-4 py-2">ไขมันอิ่มตัว</td>
+                        <td class="border border-gray-300 px-4 py-2">1.6</td>
+                        <td class="border border-gray-300 px-4 py-2">g</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Comment Form -->
+        <div class="bg-white p-6 mt-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold text-blue-700 mb-3">ฟอร์มแสดงความคิดเห็น</h2>
+            <form action="/submit-menu" method="post" class="space-y-4">
+                <div>
+                    <label class="block font-semibold">หัวข้อ:</label>
+                    <input type="text" name="menuTopic" class="w-full border border-gray-300 p-2 rounded-lg" placeholder="กรอกหัวข้อ..." required>
+                </div>
+                <div>
+                    <label class="block font-semibold">ความคิดเห็น:</label>
+                    <textarea name="menuComment" rows="4" class="w-full border border-gray-300 p-2 rounded-lg" placeholder="กรอกความคิดเห็นของคุณ..." required></textarea>
+                </div>
+                <div class="flex justify-between">
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Submit</button>
+                    <button type="reset" class="bg-gray-300 px-4 py-2 rounded-lg hover:bg-gray-400">Clear</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Back to Top -->
+    <div class="text-center mt-6">
+        <a href="#Top" class="text-blue-600 font-bold hover:underline">กลับด้านบน</a>
+    </div>
+
+</body>
+</html>
