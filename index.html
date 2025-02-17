@@ -5,13 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gradient Background</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        // Toggle for hamburger menu
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.classList.toggle('hidden');
-        }
-    </script>
 </head>
 <body class="bg-gradient-to-b from-blue-950 to-blue-200 min-h-screen">
     <!-- แถบบาร์ด้านบน-->
@@ -23,13 +16,14 @@
             <div class="lg:hidden">
                 <!-- Hamburger Icon -->
                 <button class="text-white" onclick="toggleMenu()">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                    <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="closeIcon" class="w-6 h-6 hidden text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
             </div>
-            
-            <!-- เมนูสำหรับขนาดหน้าจอใหญ่ (Desktop) -->
             <ul id="menu" class="hidden lg:flex space-x-8 text-white font-semibold text-lg">
                 <li><a href="#" class="hover:text-yellow-400 transition duration-300">Home</a></li>
                 <li><a href="#ex" class="hover:text-yellow-400 transition duration-300">Exercises</a></li>
@@ -39,7 +33,6 @@
     </div>
     <!-- ส่วนข้อมูลส่วนตัว -->
     <div class="container mx-auto flex justify-center items-center mt-20">
-        <!-- รูปภาพและข้อมูล -->
         <div class="flex flex-col justify-center items-center space-y-4">
             <!-- รูปภาพ -->
             <div class="flex-none w-64 h-64 rounded-full overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
